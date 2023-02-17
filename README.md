@@ -52,4 +52,4 @@ message-service is an MIT-licensed open source project.
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+message-service is [MIT licensed](https://github.com/gon250/message-service/blob/main/LICENSE.md).
