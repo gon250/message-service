@@ -9,11 +9,12 @@ export class WhatsappJsProvider implements MessageProvider {
 
   async send(to: string, message: string): Promise<void> {
     // TODO: If all ok, messageCreated event, if not throw exception
-    const messageSent = await this.whatsappJsClient.client.sendMessage(
-      to,
-      message,
-    );
+    const messageSent = await this.whatsappJsClient.client.sendMessage(`${to}@c.us`, message);
 
-    console.log({ messageSent });
+    if (!messageSent.id.id) {
+      throw new Error();
+    }
+
+    return Promise.resolve();
   }
 }
